@@ -55,7 +55,8 @@ function init(){
     var data = [trace1];
     var layout = {
         title: "Top Ten OTUs for Individual " +sample,
-        margin: {l: 100, r: 100, t: 100, b: 100}
+        margin: {l: 100, r: 100, t: 100, b: 100},
+        font: { color: "#49a81d", family: "Arial, Helvetica, sans-serif" }
     };
     Plotly.newPlot("bar", data, layout);  
     });
