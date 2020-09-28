@@ -14,3 +14,16 @@ function init(){
     updatemetadata(firstbutton);
     });
 }
+
+function updatemetadata(samples){
+    d3.json('data/samples.json').then((data) => {
+        
+    })
+}
+
+
+
+
+
+
+function updatecharts
