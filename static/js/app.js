@@ -45,7 +45,6 @@ function updateMetadata(sample) {
        line: {
        color: '600000'
        },
-       paper_bgcolor: "#4c646d",
        font: { color: "#49a81d", family: "Arial, Helvetica, sans-serif" }
      };
   
@@ -88,6 +87,7 @@ function updateMetadata(sample) {
         text: otu_labels.slice(0,10).reverse(),
         name: "Greek",
         type: "bar",
+        font: { color: "#49a81d", family: "Arial, Helvetica, sans-serif" },
         orientation: "h"
     };
     var data = [trace1];
