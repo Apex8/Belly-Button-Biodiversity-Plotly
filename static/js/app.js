@@ -45,8 +45,8 @@ function updateMetadata(sample) {
        line: {
        color: '600000'
        },
-       paper_bgcolor: "#a5bdc6",
-       font: { color: "#85541d", family: "Arial, Helvetica, sans-serif" }
+       paper_bgcolor: "#4c646d",
+       font: { color: "#49a81d", family: "Arial, Helvetica, sans-serif" }
      };
   
     
