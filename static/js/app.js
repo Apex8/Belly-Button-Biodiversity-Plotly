@@ -1,7 +1,10 @@
+var jsData;
+
 function init(){
     var selector = d3.select("#selDataset");
 
     d3.json("data/samples.json").then((data) =>{
+      jsData = data;
         var subjectID = data.names;
         subjectID.forEach((ID) => {
             selector
@@ -10,8 +13,8 @@ function init(){
             .property('value', ID);
         });
     const firstbutton = subjectID[0];
-    updatecharts(firstbutton);
-    updatemetadata(firstbutton);
+    updateCharts(firstbutton);
+    updateMetadata(firstbutton);
     });
 }
   
@@ -81,14 +84,15 @@ function init(){
         title: 'Belly Button Washing Frequency<br> Scrubs per Week',
         titlefont: {family: '"Arial, Helvetica, sans-serif'},
         type: "indicator",
-        mode: "gauge+number"
+        gauge: { axis: { visible: true, range: [0, 9] } },
+        mode: "number+gauge"
       }
     ];
   
     var layout = {
-      width: 450,
-       height: 400,
-       margin: { t: 25, r: 25, l: 25, b: 25 },
+      width: 600,
+       height: 450,
+       margin: { t: 100, r: 100, l: 100, b: 100 },
        line: {
        color: '600000'
        },

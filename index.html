@@ -6,52 +6,61 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Bellybutton Biodiversity</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" media="screen" href="style.css">
 </head>
 
-<body>
-
+<body style='background: rgba(1, 35, 63, 0.664)'>
+  
   <div class="container">
-    <div class="row">
-      <div class="col-md-12 jumbotron text-center">
-        <h1>Belly Button Biodiversity Dashboard</h1>
-        <p>Use the interactive charts below to pick some belly buttons!</p>
+  <div class="jumbotron text-center">
+    <h1>Belly Button Biodiversity: Pick me</h1>
+    <p>Use the interactive charts below to pick some belly buttons!</p>
+  </div>
+  <div class="row my-4">
+  </div>
+  <div class="row my-4 m-auto">
+    <div class="col-md-2 bg-white">
+      <div class="well">
+        <h5>Select Test Subject ID No.:</h5>
+        <select id="selDataset" onchange="optionChanged(this.value)"></select>
+      </div>
+      <div class="panel bg-white">
+        <div class="panel-heading">
+          <h5 class="panel-title">Demographic Info</h5>
+        </div>
+        <div id="sample-metadata" class="panel-body bg-white p-2"></div>
       </div>
     </div>
-    <div class="row">
-      <div class="col-md-2">
-        <div class="well">
-          <h5>Select Test Subject ID No.:</h5>
-          <select id="selDataset" onchange="optionChanged(this.value)"></select>
-        </div>
-        <div class="panel panel-primary">
-          <div class="panel-heading">
-            <h3 class="panel-title">Demographic Info</h3>
-          </div>
-          <div id="sample-metadata" class="panel-body"></div>
-        </div>
-      </div>
-      <div class="col-md-5">
-        <div id="bar"></div>
-      </div>
-      <div class="col-md-5">
-        <div id="gauge"></div>
-      </div>
+    <div class="col-md-5">
+      <div id="bar"></div>
     </div>
-    <div class="row">
-      <div class="col-md-12">
-        <div id="bubble"></div>
-      </div>
+    <div class="col-md-5">
+      <div id="gauge"></div>
     </div>
   </div>
-
+  <div class="row my-4">
+    <div class="col-md-12 mt-4">
+      <div id="bubble" class="mt-4"></div>
+    </div>
+  </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
   <script src="./static/js/app.js"></script>
-  <script src="./static/js/bonus.js"></script>
-  <script src="samples.json"></script>
-  
+  <!-- <script src="./static/js/bonus.js"></script>
+  <script src="samples.json"></script> -->
+
 </body>
 
 </html>
